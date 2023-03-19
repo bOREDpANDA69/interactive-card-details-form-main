@@ -1,0 +1,241 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+p {
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+}
+
+.mainBackground {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.cardBackground {
+    display: flex;
+    flex-basis: 30%;
+    background-image: url(./images/bg-main-desktop.png);
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    margin-left: 100%;
+}
+
+.front {
+    position: relative;
+    left: -100px;
+    box-shadow: 15px 15px 300px 1px rgba(0,0,0,0.34);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    color: white;
+    background-image: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+#logo {
+    padding-bottom: 50px;
+}
+#CardNumber {
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+.cardDetails {
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+}
+.back {
+    position: relative;
+    box-shadow: 15px 15px 300px 1px rgba(0,0,0,0.34);
+    border-radius: 15px;
+    background-image: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    max-height: 245px;
+}
+#cvvCard {
+    position: absolute;
+    top: 44%;
+    left: 78%;
+    color: white;
+    text-align: end;
+    padding: 0px;
+}
+
+.customerDetails {
+    flex-basis: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputArea {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    width: 400px;
+    font-size: 0.75rem;
+}
+
+.inputInfo {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #e2e2e2;
+}
+
+.inputInfo[type=text]:focus {
+    outline: none !important;
+    border: 2px solid #6f64a3;
+}
+
+.expAndCvv {
+    display: flex;
+}
+
+.expInput {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    flex-basis: 50%;
+}
+
+.date {
+    display: flex;
+    flex-basis: 50%;
+}
+
+#mm {
+    margin-right: 10px;
+}
+
+.cvcInput {
+    flex-basis: 50%;
+}
+.confirmButton {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #220930;
+    border-radius: 10px;
+    background-color: #220930;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.confirmButton:hover {
+    background-color: white;
+    color: #220930;
+}
+
+#confirmation {
+    margin-left: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#confirmation img {
+    padding: 0px 0px 20px 0px;
+}
+
+#confirmation h2 {
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+#confirmation p {
+    color: #969498;
+    padding-bottom: 20px;
+}
+
+.invalidInput {
+    color: red;
+    visibility: hidden;
+}
+
+
+@media (max-width : 375px) {
+    .mainBackground {
+        flex-direction: column;
+    }
+
+    .cardBackground {
+        background-image: url(./images/bg-main-mobile.png);
+        flex-basis: 30%;
+        background-repeat: no-repeat;
+    }
+    .cards {
+        padding: 0px;
+        margin: 0px;
+        width: 90%;
+        justify-content: center;
+    }
+    .front {
+        position: relative;
+        margin-top: 15%;
+        padding: 10px;
+        font-size: 0.5rem;
+        left: 0px;
+        width: 80%;
+        height: 135px;
+        background-size: cover;
+        z-index: 1;
+    }
+    #CardNumber {
+        font-size: 1rem;
+    }
+    #logo {
+        height: 30px;
+        padding: 5px;
+        padding-bottom: 35px;
+    }
+    .cardDetails {
+        font-size: 0.5rem;
+        letter-spacing: 1px;
+    }
+    .back {
+        position: relative;
+        width: 85%;
+        background-size: cover;
+        height: 135px;
+        margin-top: -275px;
+        margin-left: 50px;
+        border-radius: 10px;
+        z-index: 0;
+    }
+    #cardBack {
+        object-fit: contain;
+        visibility: hidden;
+    }
+    #cvvCard {
+        position: absolute;
+        top: 65px;
+    }
+
+    .inputArea {
+        margin: 0px;
+        margin-top: 50px;
+        width: 90%;
+        letter-spacing: 1px;
+    }
+
+    #confirmation {
+        margin: 0px;
+        margin-top: 50px;
+        width: 90%;
+        letter-spacing: 1px;
+    }
+}
